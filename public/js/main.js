@@ -7,7 +7,7 @@
 // ######## ##     ## ##           ##
 
 // data saving
-const FORMAL = true;
+const FORMAL = false;
 const EXPERIMENT_NAME = 'VerbCategorization';
 const SUBJ_NUM_SCRIPT = '/get-subject-number';
 const SAVING_SCRIPT = '/save-data';
