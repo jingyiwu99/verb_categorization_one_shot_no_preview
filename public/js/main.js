@@ -326,7 +326,7 @@ INSTRUCTIONS[14] = [false, false, "Well done! You understand the categorization 
 INSTRUCTIONS[15] = [false, false, "Remember: The category from the practice is just for learning.<br /><br />It has no relevance to the actual experiment."];
 // Main Experiment
 INSTRUCTIONS[16] = [false, false, "The real experiment  consists of two sessions."];
-INSTRUCTIONS[17] = [false, false, "In the first session, you will watch "+ ExpLearningTrials +" videos showing a person performing an action."];
+INSTRUCTIONS[17] = [false, false, "In the first session, you will watch "+ ExpLearningTrials +" videos showing people performing different actions."];
 INSTRUCTIONS[18] = [false, false, "Click the video to play it, and click \"Next\" to continue.<br /><br />You can play each video up to three times."];
 INSTRUCTIONS[19] = [false, false, "These videos are from the same category.<br /><br />Please pay attention to what kind of event they represent."];
 INSTRUCTIONS[20] = [false, false, "These videos will not appear again during the second session."];
