@@ -23,7 +23,9 @@ const COMPLETION_URL = 'https://app.prolific.com/submissions/complete?cc=CDAFVRN
 
 // stimuli
 const STIM_PATH = 'media/';
-const PRACTICE_LEARNING_LIST = ['practice_learning_cat.jpg'];
+const PRACTICE_LEARNING_LIST = [
+    'practice_learning_cat.jpg', 'practice_learning_cat2.jpg', 'practice_learning_panda.jpg',
+    'practice_learning_panda2.jpg', 'practice_learning_horse.jpg', 'practice_learning_horse2.jpg',];
 const PRACTICE_TESTING_LIST = [
     { file: "practice_testing_tiger.jpg", correct: "yes" },
     { file: "practice_testing_tiger2.jpg", correct: "yes" },
@@ -100,9 +102,9 @@ const INTERTRIAL_INTERVAL = 0.5;
 const INSTR_IMG_LIST = ['maximize_window.png'];
 const ALL_IMG_LIST = PRACTICE_LEARNING_LIST.concat(PRACTICE_TESTING_LIST).concat(INSTR_IMG_LIST);
 
-PracticeLearningTrials = 1
+PracticeLearningTrials = 6
 PracticeTestingTrials = 8
-ExpLearningTrials = 1
+ExpLearningTrials = 6
 ExpTestingNumber = 17
 
 
@@ -126,10 +128,10 @@ $(document).ready(function() {
     subj = new Subject(subj_options);
     subj.id = subj.getID(ID_GET_VARIABLE_NAME);
     console.log(subj.id);
-    // if (!subj.id) {
-    //     subj.id = 'testuser';
-    //     subj.validID = true;
-    // }// if part is for testing on local server, needed to be removed later
+    if (!subj.id) {
+        subj.id = 'testuser';
+        subj.validID = true;
+    }// if part is for testing on local server, needed to be removed later
 
     subj.saveVisit();
     if (subj.phone) {
@@ -310,11 +312,11 @@ INSTRUCTIONS[1] =  [show_maximize_image, enter_fullscreen, "For this experiment 
 INSTRUCTIONS[2] = [hide_instr_img, show_no_music_image, "Please also turn off any music you are playing. Music is known to affect this kind of studies, and it will make your data unusable."];
 INSTRUCTIONS[3] = [hide_instr_img, show_consent, "You can press SPACE to start. Please focus after you start. (Don\'t switch to other windows or tabs!)"];
 INSTRUCTIONS[4] = [false, false, "We'll show you some instructions in the next few pages.<br /><br />Please read carefully, and avoid using the refresh or back buttons."];
-INSTRUCTIONS[5] = [false, false, "Your task is to first watch "+ ExpLearningTrials +" action from a category.<br /><br />Then, you will watch a new set of actions and decide whether each one belongs to the same category as the first action."];
+INSTRUCTIONS[5] = [false, false, "Your task is to first watch "+ ExpLearningTrials +" actions from a category.<br /><br />Then, you will watch a new set of actions and decide whether each one belongs to the same category as the first action."];
 INSTRUCTIONS[6] = [false, false, "The whole experiment will take around 10 minutes.<br /><br />To help you get familiar with the task, you'll first complete a short practice round."];
 //practice phase
-INSTRUCTIONS[7] = [false, false, "During the practice, you will see " + PracticeLearningTrials +" image first."];
-INSTRUCTIONS[8] = [false, false, "This image is one example from a category.<br /><br />This exact image will not appear again during the later categorization task."]
+INSTRUCTIONS[7] = [false, false, "During the practice, you will see " + PracticeLearningTrials +" images first."];
+INSTRUCTIONS[8] = [false, false, "These images are from the same category.<br /><br />These images will not appear again during the later categorization task."]
 INSTRUCTIONS[9] = [show_practice_learning, false, ""];
 INSTRUCTIONS[10] = [false, false, "Then, you will see some new images, one at a time."];
 INSTRUCTIONS[11] = [false, false, "Click \"Yes\" if you think the picture belongs to the same category as the first image.<br /><br />Click \"No\" if you think it does not."]
@@ -324,14 +326,14 @@ INSTRUCTIONS[14] = [false, false, "Well done! You understand the categorization 
 INSTRUCTIONS[15] = [false, false, "Remember: The category from the practice is just for learning.<br /><br />It has no relevance to the actual experiment."];
 // Main Experiment
 INSTRUCTIONS[16] = [false, false, "The real experiment  consists of two sessions."];
-INSTRUCTIONS[17] = [false, false, "In the first session, you will watch "+ ExpLearningTrials +" video showing a person performing an action."];
+INSTRUCTIONS[17] = [false, false, "In the first session, you will watch "+ ExpLearningTrials +" videos showing a person performing an action."];
 INSTRUCTIONS[18] = [false, false, "Click the video to play it, and click \"Next\" to continue.<br /><br />You can play each video up to three times."];
-INSTRUCTIONS[19] = [false, false, "This video is one example from a category.<br /><br />Please pay attention to what kind of event it represents."];
-INSTRUCTIONS[20] = [false, false, "This exact video will not appear again during the second session."];
+INSTRUCTIONS[19] = [false, false, "These videos are from the same category.<br /><br />Please pay attention to what kind of event they represent."];
+INSTRUCTIONS[20] = [false, false, "These videos will not appear again during the second session."];
 INSTRUCTIONS[21] = [false, false, "Now, let's begin by watching the first video."];
 INSTRUCTIONS[22] = [show_experiment_learning, false, ""];
 INSTRUCTIONS[23] = [false, false, "In the second session, you will watch " + ExpTestingNumber + " trials.<br /><br />Also, each video can be played up to three times."];
-INSTRUCTIONS[24] = [false, false, "You need to decide whether each new video belongs to the same category as the first video you just saw."];
+INSTRUCTIONS[24] = [false, false, "You need to decide whether each new video belongs to the same category as the six videos you just saw."];
 INSTRUCTIONS[25] = [show_experiment_testing, false, ""];
 
 
