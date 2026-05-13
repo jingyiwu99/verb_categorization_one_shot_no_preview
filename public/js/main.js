@@ -312,14 +312,14 @@ INSTRUCTIONS[1] =  [show_maximize_image, enter_fullscreen, "For this experiment 
 INSTRUCTIONS[2] = [hide_instr_img, show_no_music_image, "Please also turn off any music you are playing. Music is known to affect this kind of studies, and it will make your data unusable."];
 INSTRUCTIONS[3] = [hide_instr_img, show_consent, "You can press SPACE to start. Please focus after you start. (Don\'t switch to other windows or tabs!)"];
 INSTRUCTIONS[4] = [false, false, "We'll show you some instructions in the next few pages.<br /><br />Please read carefully, and avoid using the refresh or back buttons."];
-INSTRUCTIONS[5] = [false, false, "Your task is to first watch "+ ExpLearningTrials +" actions from a category.<br /><br />Then, you will watch a new set of actions and decide whether each one belongs to the same category as the six actions."];
+INSTRUCTIONS[5] = [false, false, "Your task is to first watch "+ ExpLearningTrials +" actions from a category.<br /><br />Then, you will watch a new set of actions and decide whether each one belongs to the same category as the 6 actions."];
 INSTRUCTIONS[6] = [false, false, "The whole experiment will take around 10 minutes.<br /><br />To help you get familiar with the task, you'll first complete a short practice round."];
 //practice phase
 INSTRUCTIONS[7] = [false, false, "During the practice, you will see " + PracticeLearningTrials +" images first."];
 INSTRUCTIONS[8] = [false, false, "These images are from the same category.<br /><br />These images will not appear again during the later categorization task."]
 INSTRUCTIONS[9] = [show_practice_learning, false, ""];
 INSTRUCTIONS[10] = [false, false, "Then, you will see some new images, one at a time."];
-INSTRUCTIONS[11] = [false, false, "Click \"Yes\" if you think the picture belongs to the same category as the first image.<br /><br />Click \"No\" if you think it does not."]
+INSTRUCTIONS[11] = [false, false, "Click \"Yes\" if you think the picture belongs to the same category as the 6 images.<br /><br />Click \"No\" if you think it does not."]
 INSTRUCTIONS[12] = [show_practice_testing, false, ""];
 INSTRUCTIONS[13] = [false, false, "Oops! You didn't categorize the practice images correctly.<br /><br />Let's review them again to make sure you've got the idea."];
 INSTRUCTIONS[14] = [false, false, "Well done! You understand the categorization task."];
@@ -333,7 +333,7 @@ INSTRUCTIONS[20] = [false, false, "These videos will not appear again during the
 INSTRUCTIONS[21] = [false, false, "Now, let's begin by watching the first video."];
 INSTRUCTIONS[22] = [show_experiment_learning, false, ""];
 INSTRUCTIONS[23] = [false, false, "In the second session, you will watch " + ExpTestingNumber + " trials.<br /><br />Also, each video can be played up to three times."];
-INSTRUCTIONS[24] = [false, false, "You need to decide whether each new video belongs to the same category as the six videos you just saw."];
+INSTRUCTIONS[24] = [false, false, "You need to decide whether each new video belongs to the same category as the 6 videos you just saw."];
 INSTRUCTIONS[25] = [show_experiment_testing, false, ""];
 
 
