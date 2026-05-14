@@ -7,7 +7,7 @@
 // ######## ##     ## ##           ##
 
 // data saving
-const FORMAL = false;
+const FORMAL = true;
 const EXPERIMENT_NAME = 'VerbCategorization';
 const SUBJ_NUM_SCRIPT = '/get-subject-number';
 const SAVING_SCRIPT = '/save-data';
@@ -128,10 +128,10 @@ $(document).ready(function() {
     subj = new Subject(subj_options);
     subj.id = subj.getID(ID_GET_VARIABLE_NAME);
     console.log(subj.id);
-    if (!subj.id) {
-        subj.id = 'testuser';
-        subj.validID = true;
-    }// if part is for testing on local server, needed to be removed later
+    // if (!subj.id) {
+    //     subj.id = 'testuser';
+    //     subj.validID = true;
+    // }// if part is for testing on local server, needed to be removed later
 
     subj.saveVisit();
     if (subj.phone) {
